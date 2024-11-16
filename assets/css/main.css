@@ -3240,6 +3240,8 @@ input, select, textarea {
     background-repeat: repeat, no-repeat, no-repeat;
     background-attachment: scroll, scroll, scroll;
     z-index: -1;
+			  filter: blur(50px);  /* Adjust blur amount */
+    z-index: -2;  /* Ensure the blur is behind the content */
 }
 
 #wrapper > .bg::before {
