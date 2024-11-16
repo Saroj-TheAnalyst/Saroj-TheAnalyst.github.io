@@ -3227,23 +3227,33 @@ input, select, textarea {
 		overflow: hidden;
 	}
 
+
+
+/* Wrapper edit  */
 		#wrapper > .bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../images/img.jpeg"); /* Set the image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(10px); /* Apply blur to the image */
+}
+
+#wrapper > .bg::after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
-        url("../../images/img.jpeg"), /* Background image */
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Black gradient with 50% opacity */
-    background-size: cover, cover; /* Ensure both the image and gradient cover the area */
-    background-position: center, center;
-    background-repeat: no-repeat;
-    background-attachment: scroll, scroll;
-    filter: blur(10px); /* Apply blur effect to the image */
-    z-index: -1; /* Ensure the background stays behind content */
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay at 50% opacity */
+    z-index: 1; /* Ensure the overlay is above the blurred background */
 }
 
+
+/* Wrapper edit  */
 
 			#wrapper > .bg.fixed {
 				position: fixed;
