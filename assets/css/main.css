@@ -3227,28 +3227,20 @@ input, select, textarea {
 		overflow: hidden;
 	}
 
-
-
-/* Wrapper edit  */
-	#wrapper > .bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        url("../../images/img.png"), /* Background image */
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Black gradient with 50% opacity */
-    background-size: cover, cover; /* Ensure both the image and gradient cover the area */
-    background-position: center, center;
-    background-repeat: no-repeat;
-    background-attachment: scroll, scroll;
-    filter: blur(10px); /* Apply blur effect to the image */
-    z-index: -1; /* Ensure the background stays behind content */
-}
-
-
-/* Wrapper edit  */
+		#wrapper > .bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #212931;
+			background-image: url("../../images/img.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
+			background-size: auto,								auto,														100% auto;
+			background-position: center,								center,														top center;
+			background-repeat: repeat,								no-repeat,													no-repeat;
+			background-attachment: scroll,								scroll,														scroll;
+			z-index: -1;
+		}
 
 			#wrapper > .bg.fixed {
 				position: fixed;
@@ -4695,20 +4687,3 @@ input, select, textarea {
 		}
 
 	}
-
-
-
-#introo p {
-    margin: 0; /* Removes margin around the paragraph */
-}
-
-#introo a {
-    text-decoration: none; /* Removes underline from links */
-    color: #007bff; /* Sets a default color for links */
-    font-weight: bold; /* Makes the text bold */
-}
-
-#introo a:hover {
-    text-decoration: underline; /* Adds underline on hover for better UX */
-    color: #0056b3; /* Darkens the link color on hover */
-}
