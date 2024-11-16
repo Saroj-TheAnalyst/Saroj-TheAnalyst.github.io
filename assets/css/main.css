@@ -3228,20 +3228,33 @@ input, select, textarea {
 	}
 
 		#wrapper > .bg {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: #212931;
-			background-image: url("../../images/img.jpeg"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
-			background-size: auto,								auto,														100% auto;
-			background-position: center,								center,														top center;
-			background-repeat: repeat,								no-repeat,													no-repeat;
-			background-attachment: scroll,								scroll,														scroll;
-			z-index: -1;
-			backdrop-filter: blur(10px);
-		}
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #212931;
+    background-image: url("../../images/img.jpeg"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
+    background-size: auto, auto, 100% auto;
+    background-position: center, center, top center;
+    background-repeat: repeat, no-repeat, no-repeat;
+    background-attachment: scroll, scroll, scroll;
+    z-index: -1;
+}
+
+#wrapper > .bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;  /* Blur 80% of the background */
+    background-image: url("../../images/img.jpeg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);  /* Adjust blur amount */
+    z-index: -2;  /* Ensure the blur is behind the content */
+}
 
 			#wrapper > .bg.fixed {
 				position: fixed;
