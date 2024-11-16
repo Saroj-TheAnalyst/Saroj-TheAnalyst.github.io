@@ -100,31 +100,33 @@
             </section>
 
            <!-- Training & Certifications -->
-<section>
+<section id="certifications">
     <h2>Training & Certifications</h2>
     <ul>
         <li>
             <strong>Data Analytics Bootcamp</strong> - Extra Tech Institute, 2023
-            <a href="https://github.com/Saroj-TheAnalyst/Saroj-TheAnalyst.github.io/raw/main/assets/portfolio/certificate.pdf" 
-               target="_blank" class="button">View Certificate</a>
+            <button class="button" onclick="showPDF('https://github.com/Saroj-TheAnalyst/Saroj-TheAnalyst.github.io/raw/main/assets/portfolio/certificate.pdf')">View Certificate</button>
         </li>
         <li>
             <strong>Microsoft Office Training</strong> - YoungInnovations Pvt. Ltd., 2023
-            <a href="https://github.com/Saroj-TheAnalyst/Saroj-TheAnalyst.github.io/raw/main/assets/portfolio/certificate.pdf" 
-               target="_blank" class="button">View Certificate</a>
+            <button class="button" onclick="showPDF('https://github.com/Saroj-TheAnalyst/Saroj-TheAnalyst.github.io/raw/main/assets/portfolio/certificate.pdf')">View Certificate</button>
         </li>
     </ul>
 </section>
 
 <!-- CV Section -->
-<section>
+<section id="cv">
     <h2>CV</h2>
-    <p>
-        Download my detailed CV here: 
-        <a href="https://github.com/Saroj-TheAnalyst/Saroj-TheAnalyst.github.io/raw/main/assets/portfolio/Saroj%20Pokharel.pdf" 
-           target="_blank" class="button">Download CV</a>
-    </p>
+    <button class="button" onclick="showPDF('https://github.com/Saroj-TheAnalyst/Saroj-TheAnalyst.github.io/raw/main/assets/portfolio/Saroj%20Pokharel.pdf')">View CV</button>
 </section>
+
+<!-- PDF Viewer -->
+<section id="pdf-viewer" style="display:none; margin-top: 20px;">
+    <h2>PDF Viewer</h2>
+    <iframe id="pdf-frame" src="" width="100%" height="600px" style="border: none;"></iframe>
+    <button class="button" onclick="closePDF()">Close Viewer</button>
+</section>
+
 
         </div>
 
@@ -189,6 +191,11 @@
 
 			
     <!-- Scripts -->
+
+
+
+
+	
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -196,6 +203,29 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+
+
+
+
+
+<script>
+    function showPDF(url) {
+        document.getElementById('pdf-frame').src = url;
+        document.getElementById('pdf-viewer').style.display = 'block';
+        window.scrollTo(0, document.getElementById('pdf-viewer').offsetTop);
+    }
+
+    function closePDF() {
+        document.getElementById('pdf-frame').src = '';
+        document.getElementById('pdf-viewer').style.display = 'none';
+    }
+</script>
+
+
+
+
+	
 
 </body>
 
