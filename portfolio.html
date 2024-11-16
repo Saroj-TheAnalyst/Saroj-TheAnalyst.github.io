@@ -105,11 +105,11 @@
     <ul>
         <li>
             <strong>Data Analytics Bootcamp</strong> - Extra Tech Institute, 2023
-            <button class="button" onclick="showPDF('https://raw.githubusercontent.com/Saroj-TheAnalyst/Saroj-TheAnalyst.github.io/main/assets/portfolio/certificate.pdf')">View Certificate</button>
+            <a href="https://raw.githubusercontent.com/Saroj-TheAnalyst/Saroj-TheAnalyst.github.io/main/assets/portfolio/certificate.pdf" target="_blank" class="button">View Certificate</a>
         </li>
         <li>
             <strong>Microsoft Office Training</strong> - YoungInnovations Pvt. Ltd., 2023
-            <button class="button" onclick="showPDF('https://raw.githubusercontent.com/Saroj-TheAnalyst/Saroj-TheAnalyst.github.io/main/assets/portfolio/certificate.pdf')">View Certificate</button>
+            <a href="https://raw.githubusercontent.com/Saroj-TheAnalyst/Saroj-TheAnalyst.github.io/main/assets/portfolio/certificate.pdf" target="_blank" class="button">View Certificate</a>
         </li>
     </ul>
 </section>
@@ -117,32 +117,9 @@
 <!-- CV Section -->
 <section id="cv">
     <h2>CV</h2>
-    <button class="button" onclick="showPDF('https://raw.githubusercontent.com/Saroj-TheAnalyst/Saroj-TheAnalyst.github.io/main/assets/portfolio/Saroj%20Pokharel.pdf')">View CV</button>
+    <a href="https://raw.githubusercontent.com/Saroj-TheAnalyst/Saroj-TheAnalyst.github.io/main/assets/portfolio/Saroj%20Pokharel.pdf" target="_blank" class="button">View CV</a>
 </section>
 
-<!-- PDF Viewer -->
-<section id="pdf-viewer" style="display: none; margin-top: 20px;">
-    <h2>PDF Viewer</h2>
-    <iframe id="pdf-frame" src="" width="100%" height="600px" style="border: 1px solid #ccc;"></iframe>
-    <button class="button" onclick="closePDF()">Close Viewer</button>
-</section>
-
-<!-- JavaScript -->
-<script>
-    function showPDF(url) {
-        document.getElementById('pdf-frame').src = url;
-        document.getElementById('pdf-viewer').style.display = 'block';
-        window.scrollTo({
-            top: document.getElementById('pdf-viewer').offsetTop,
-            behavior: 'smooth'
-        });
-    }
-
-    function closePDF() {
-        document.getElementById('pdf-frame').src = '';
-        document.getElementById('pdf-viewer').style.display = 'none';
-    }
-</script>
 
 
 
