@@ -4687,3 +4687,20 @@ input, select, textarea {
 		}
 
 	}
+
+
+
+#introo p {
+    margin: 0; /* Removes margin around the paragraph */
+}
+
+#introo a {
+    text-decoration: none; /* Removes underline from links */
+    color: #007bff; /* Sets a default color for links */
+    font-weight: bold; /* Makes the text bold */
+}
+
+#introo a:hover {
+    text-decoration: underline; /* Adds underline on hover for better UX */
+    color: #0056b3; /* Darkens the link color on hover */
+}
