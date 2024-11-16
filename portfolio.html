@@ -99,7 +99,7 @@
                 </ul>
             </section>
 
-          <!-- Training & Certifications -->
+         <!-- Training & Certifications -->
 <section id="certifications">
     <h2>Training & Certifications</h2>
     <ul>
@@ -121,9 +121,9 @@
 </section>
 
 <!-- PDF Viewer -->
-<section id="pdf-viewer" style="display:none; margin-top: 20px;">
+<section id="pdf-viewer" style="display: none; margin-top: 20px;">
     <h2>PDF Viewer</h2>
-    <iframe id="pdf-frame" src="" width="100%" height="600px" style="border: none;"></iframe>
+    <iframe id="pdf-frame" src="" width="100%" height="600px" style="border: 1px solid #ccc;"></iframe>
     <button class="button" onclick="closePDF()">Close Viewer</button>
 </section>
 
@@ -132,7 +132,10 @@
     function showPDF(url) {
         document.getElementById('pdf-frame').src = url;
         document.getElementById('pdf-viewer').style.display = 'block';
-        window.scrollTo(0, document.getElementById('pdf-viewer').offsetTop);
+        window.scrollTo({
+            top: document.getElementById('pdf-viewer').offsetTop,
+            behavior: 'smooth'
+        });
     }
 
     function closePDF() {
@@ -140,6 +143,7 @@
         document.getElementById('pdf-viewer').style.display = 'none';
     }
 </script>
+
 
 
         </div>
